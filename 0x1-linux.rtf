@@ -1,1 +1,31 @@
 cd: change directory
+pwd: print working directory
+~ = tilda
+cd .. : goes back a folder
+/$: base folder
+ls: lists dirs
+mkdir: creates dir
+ls -la: lists hidden files (-l flag is long format, -a flag shows files with ".")
+cp: copy (e.g, cp new.txt Documents/new.txt)
+rm: removes (e.g, rm Documents/new.txt)
+mv: moves files (e.g, mv new.txt Desktop/new.txt
+updatedb: updates the database (good to located files)
+locate: find files (e.g, locate new.txt)
+man: manual pages (e.g, man ls) 
+-[rw]-[rw]-[r]: [file/folder owner]-[group owner]-[all other permissions] (dash in front is a file)
+rwx: read write execute
+chmod: change mode
+chmod 777 new.txt: will give it rwx on that file
+chmod +x: will give it x permissions for everyone
+adduser: creates a new user (e.g, adduser unik)
+cat /etc/passwd: good to find users (provides a placeholder for a diff file, called the shadow file)
+cat /etc/shadow: good to find hash of pw
+rm -rf: delets folder called linux (-r flag is recursive removal, -f flag to force action)
+su -: log into root
+/var/log/auth.log: incidents are reported here (cat auth.log)
+ifconfig: network info
+iwconfig: wireless adapter info
+ping: echos an ICMP request 
+ping -c 4 192.168.0.1: limits count to 4
+arp -a : associates mac addr with ip -- good to know whats connected via broadcast ip
+netstat: good to know what ports are connected
