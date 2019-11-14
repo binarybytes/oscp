@@ -37,4 +37,9 @@ nano hello3.txt: creates a file
 cat hello.txt: opens file
 apt install: installs programs (apt install git -y) auto installs -y yes to install
 apt purge *program*: removes anything to do with that program
-git clone:
+git clone: clone repos
+systemctl enable: start/stop services regardless of rebooting (systemctl enable ssh/postgresql)
+ping -c 1 8.8.8.8 > ping.txt: creates a file for the outcome
+cat ping.txt | grep "64 bytes" : looks in file for words 64 bytes
+cat ping.txt | grep "64 bytes" | cut -d " " -f 4 : ^ + uses a delimiter, space " ", in -f (field) number 4
+cat ping.txt | grep "64 bytes" | cut -d " " -f 4 | tr -d ":"  :tr means translate, and takes out the colon
