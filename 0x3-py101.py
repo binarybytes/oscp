@@ -1,6 +1,3 @@
-
-
-
 #!/bin/python3
 
 
@@ -120,7 +117,154 @@ nl
 
 #boolean expressions (true or false)
 
+#boolean expressions (true or false)
 
+
+print("boolean expressions")
+
+bool1 = True
+bool2 = 3*3 == 9
+
+bool3 = False
+bool4 = 3*3 != 9
+
+print(bool1,bool2,bool3,bool4)
+
+print(type(bool1))
+
+
+bool5 = "True"
+
+print(type(bool5))
+
+#relation + Bool operators
+
+nl
+
+greater_than = 7 > 5
+
+less_than = 5 < 7
+
+greater_than_equal_to = 7 >= 7
+
+less_than_equal_to = 7 <= 7 
+
+print(greater_than, less_than,greater_than_equal_to, less_than_equal_to)
+
+
+test_and = (7 > 5) and (5 < 7) # one false makes it all false
+test_or = (7 > 5) or (5 < 7) #only both false makes it false
+test_not = not True # will be false 
+
+
+print(test_and)
+
+
+nl
+
+
+#conditional statements
+
+
+
+print("conditionals statements")
+
+
+def soda(money):
+	if money >= 2:
+		return "You've got yo self a soda bruh!!!"
+	else:
+		return "no diabetes bruh!!"
+
+print(soda(3))
+print(soda(1))
+
+nl
+
+def alcohol(age,money):
+	if (age >= 18) and (money >= 5):
+		return "we gettin litttt!"
+	elif (age >=18) and (money < 5):
+		return "come back wit doh"
+	elif (age < 18) and (money >= 5):
+		return "nice try kiddo"
+	else:
+		return "u broke kiddie"
+
+print(alcohol(18,5))
+print(alcohol(18,4))
+print(alcohol(17,4))
+
+
+print(nl)
+
+#lists (has brackets not parentheses)
+
+print("lists have brackets")
+
+movies = ["where harry met sally", "the hanvover", "flowers", "titanic"]
+
+print(movies[0])
+
+# numbering starts at 0, not 1
+
+print(movies[0:2])
+#you have to call the next number if you want the exact number
+
+#slicing (up to but not including)
+
+print(movies[1:]) #pulls starting from 1 till the end
+print(movies[:1]) #pulls first item?
+print(movies[-1])#pulls last item
+print(len(movies))
+
+movies.append("jaws")
+print(movies)
+
+movies.pop() #no number means rm last items
+print(movies)
+
+
+movies.pop(1)
+print(movies)
+
+
+movies = ["where harry met sally", "the hanvover", "flowers", "titanic"]
+
+person = ["heath", "jake", "leah", "jef"]
+
+
+combined = zip(movies, person)
+print(list(combined))
+#the above does a list in a list -- list inception, 
+
+
+
+#tuples (has parentheses and are immutable - cant change)
+
+print("tuples have parentheses and canNOT change!")
+
+grades = ("A", "B", "C", "D", "F")
+print(grades[1]) #will print B
+
+#looping 
+
+print("for loops - start to finish of iterate:")
+
+
+vegetables = ["cucumber", "spinach", "carrot"]
+for x in vegetables:
+	print(x)
+
+
+print("while loops - exe as long as True:")
+
+i = 1
+while i < 10: #while true, do smthing 
+	print(i)
+	i += 1
+
+	
 
 
 
