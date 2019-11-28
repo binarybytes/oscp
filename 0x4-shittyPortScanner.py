@@ -20,23 +20,22 @@ else:
 	sys.exit()
 
 #banner++
-print("`" * 50)
-print("scanning target " +target)
+print("-" * 50)
+print("scanning target "+target)
 print("time started: "+str(datetime.now()))
-print("`" * 50) 
+print("-" * 50) 
 
+#AF_INET is ipv4
+#sockstream is your port
 
 try: 
 	for port in range(50,85):
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#AF_INET is ipv4
-#sockstream is your port
-		socket.setdefaulttimeout(1) #float
-		result = s.connect_ex((target,port)) #returns error indicator
-#no error ++ 0
-		print("checking port {}".format((port))
+		socket.setdefaulttimeout(1) #float;moves on after 1 second
+		result = s.connect_ex((target,port)) #error indicator
+		print("checking port {}...".format(port))
 		if result == 0:
-			print("port {} is open".format(port))
+			print("Port {} is open".format(port))	
 		s.close()
 
 
@@ -50,14 +49,3 @@ except socket.gaierror:
 except socket.error:
 	print("couldnt connect to server")
 	sys.exit()
-
-
-
-
-
-
-
-
-
-
-
