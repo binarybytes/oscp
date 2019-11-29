@@ -1,1 +1,33 @@
+------
+osint
+6:55 p.m.
+Thursday, November 28, 2019, Toronto, ON
+------
+#1 recon:
+passive: use social media like LI,gmail, etc
+active: traffic against site (nmap, nikto, etc)
 
+location imaging: drones, satellite images, building layouts (badge readers, security, break areas, fencing)
+job info: employee (name, title, job title, phone #, manager) -- profile/topology
+pictures (badge photos, desk photos, computer photos, etc)
+
+[[web/host recon]]
+target validation: whois, nslookup, dnsrecon
+finding subdomains: google fu, dig, nmap, sublist3r, bluto, crt.sh, etc
+fingerprinting: nmap, wappalyzer, whatweb, builtwith, netcat(to get the headers of the site)
+databreaches: haveibeenpwned, + etc
+
+active: using nmap etc
+
+[[round 1]]
+bugcrowd-->choose prgam
+hunter.io-->find pattern in name
+
+
+#2 scanning/enumeration:
+
+#3 gaining access:
+
+#4 maintaining access:
+
+#5 covering tracks:
