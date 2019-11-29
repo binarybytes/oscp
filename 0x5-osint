@@ -22,7 +22,10 @@ active: using nmap etc
 [[round 1]]
 bugcrowd-->choose prgam
 hunter.io-->find pattern in name
-
+google> site:tesla.com -www filetype:pdf
+~$ theharvester (built in kali)
+netcraft
+crt.sh
 
 #2 scanning/enumeration:
 
