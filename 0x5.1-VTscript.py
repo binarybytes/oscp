@@ -1,15 +1,18 @@
 
 
 
+#!/bin/python3
+
 import requests
 
-url = "https://www.virustotal.com/vtapi/v2/url/scan"
 
-params = {"apikey" : <apikey>, "resource", : <resource>}
+url = 'https://www.virustotal.com/vtapi/v2/url/scan'
+params = {'apikey':'APIKEYZ', 'url':'badguy.xom'}
+response = requests.post(url, data=params)
 
-response = requests.get(url, params = params)
+print(response.json())
 
-print(response.json)
+
 
 #resource; MD5, SHA-1 or SHA-256
 #scan_id; endpoint
