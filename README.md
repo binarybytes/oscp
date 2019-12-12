@@ -1,0 +1,3 @@
+# oscp
+tracking myself...
+beginning a month ago, now the goal is a month away
