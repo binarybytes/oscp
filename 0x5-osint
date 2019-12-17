@@ -1,8 +1,8 @@
-------
+-----------------------------------------------------------------
 osint
 6:55 p.m.
 Thursday, November 28, 2019, Toronto, ON
-------
+------------------------------------------------------------------
 #1 recon:
 passive: use social media like LI,gmail, etc
 active: traffic against site (nmap, nikto, etc)
@@ -98,6 +98,29 @@ webapp assessment vs pentest
 e.g, vulnerabilites(xss,csrf) < exploit (sql inj, cred stuff, pwd spray)
 
 #-------------------e-n-d-------------------------------------------------------------
+#--------------------------------------------N-I-K-T-O--------------------------------
+#webserver vulns (missing headers, xss etc)
+#
+# $ nikto -h https://example.com	
+#
+#
+#
+#
+#
+#----------------B-U-R-P-S-U-I-T-E------------
+#invest $400 to get the pro edition - webapp vulns
+#need nessus+burpsuite=~2900 (cobaltstrike=~7k)
+#
+# first congifure browser settings to manual proxy > 127.0.0.1 port 8080 (accept all protocols)
+#	proxy tab > intercept on > fwd x 10
+#	target tab > r.clk main domain > add to scope   
+#	filter > show only in scope
+#	right click scope domain > scan (pro version)
+#
+#
+#
+#
+#----------------------------------------------
 
 
 
@@ -109,4 +132,4 @@ e.g, vulnerabilites(xss,csrf) < exploit (sql inj, cred stuff, pwd spray)
 #5 covering tracks:
 
 
-5:27:24 / 15:11:37
+6:50:45 / 15:11:37
