@@ -31,6 +31,26 @@ netcraft
 crt.sh
 
 
+#-----------------------------------------t-0-0-l-z-----------------------------------------------------------------------------
+# zmap/masscan - fast/new scanner for iPv4
+# mmkatz -post exploit tool (extract pwds + ntlm hashes)
+# canvas comm.(immunity) -exploit fwork, like cobaltstrike, 
+# innuendo comm.(immunity) - postexploit implant fwork
+# binwalk - analyze firmware images + serach hardcoded pwds, apikeys,etc
+# tor - anonymity/not encryption
+# cain/able - pwd cracker/snip voip/mitm against rdp, etc (windows only)
+# ncrack((creator of nmap))- bforce pwds for RDP, SSH, http(s), SMB, pop3(s), VNC, FTP, and telnet
+# oclhashcat - hash db>pwd
+# aircrack-ng - wireless nwork attacks
+# sqlmap - detect sqlinj + dump db info + inject w/ shell access
+# set (social engineer tk)-client side attack (create phish email, send, exploit)
+# evilgrade - mitm attck via fake upgrade (over 63 fakeupdates) 
+# sslstrip - attacks httpS + replaces unencrypted connection favicon with padlock for brownie poointz!
+# ettercap - tools for mitm attck(from inj>xploit)
+# metasploit - xploit dev+pentest tool(both server/client attcks+meterpreter(custom payload)+armitage point n click attcks)
+#-----------------------------------------------------------------------------------------------------------------------------
+
+
 wappalyzer - use to get site info, w/o sharingip
 
 #2 scanning/enumeration:
