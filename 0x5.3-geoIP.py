@@ -30,6 +30,8 @@ import requests
 
 
 
-url = 'http://freegeoip.io/json/8.8.8.8'
-r = requests.post(url)
+
+url = 'http://api.ipstack.com/'
+params = {'access_key' : '42cc62a421cf3af7151c87b9f7ebb7e2', 'ip' : '8.8.8.8'} 
+r = requests.post(url, data=params)
 print(r)
