@@ -1,18 +1,18 @@
-# curl https://api.hackertarget.com/geoip/?q=64.137.135.53
-
 #!/bin/python3
 
-import requests
+#pip install geoip2
 
-
-url = 'https://api.hackertarget.com/geoip/?q=1.1.1.1'
-params = {'apikey':'APIKEYZ', 'url':'badguy.xom'}
-response = requests.post(url, data=params)
-
-print(response.json())
-
-#url of a gcp'Maps Static API' image
-#http://maps.googleapis.com/maps/api/staticmap?center=38.000000,-97.000000&zoom=5&size=400x400&sensor=false&markers=color:blue|38.000000,-97.000000&key=API_KEY
-
-
-
+import geoip2.webservice
+#replcae 42 with account id+license key with legit l-key)
+client = geoip2.webserver.Client(62, 'license key')
+#replcae insights with method e.g, 'country', 'city'
+response = client.insights('1.2.3.4')
+response.country.iso_code
+response.country.name
+response.country.names['zh-CN']
+response.subdivisions.most_specific.name
+response.subdivisions.most_specific.iso_code
+response.city.name
+response.postal.code
+response.location.latitude
+response.location.longitude
