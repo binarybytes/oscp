@@ -20,6 +20,9 @@ databreaches: haveibeenpwned, + etc
 active: using nmap etc
 
 [[round 1]]
+riddler.io
+findsubdomains.com>spyse.com
+certdb.com/api-documentation
 bugcrowd-->choose prgam
 hunter.io-->find pattern in name
 google> site:tesla.com -www filetype:pdf
