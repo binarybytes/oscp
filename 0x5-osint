@@ -42,64 +42,61 @@ udp (connection-less):dns,dhcp,snmp
 -used on apps tht needs fast connections
 
 #-------------------------N-M-A-P-----------------------------------------
-
-#nmap -T4
-T1:T5 (speeds-t1 slow - t5 fast : faster might miss / migt get detected)
--A (all, enables OS/version detection, script scan, tracert, much info as possible)
--P (port range, 1-65,535k, otherwise will search thru commmon 1k)
-
-nmap -sU -T4 10.88.111.10
-
-#udp is rlly slow(need to use it for oscp,htb,etc)
-
-#------------------------e-n-d---------------------------------------------
-
+#
+# nmap -T4
+# T1:T5 (speeds-t1 slow - t5 fast : faster might miss / migt get detected)
+# -A (all, enables OS/version detection, script scan, tracert, much info as possible)
+# -P (port range, 1-65,535k, otherwise will search thru commmon 1k)
+#
+# nmap -sU -T4 10.88.111.10
+#
+# udp is rlly slow(need to use it for oscp,htb,etc)
+#
 #---------------------------------M-E-T-A-S-P-L-O-I-T-----------------
-
-ls /usr/share/nmap/scripts
-^all scripts available via nmap
-
-#eternal blue
-smd-vuln-ms17-010.nse
-#enumeration is the most !!
-
-#check for ciphers first 
-
-nmap -p 443 --script=all #runs all scripts in the folder + time consume)
-nmap -p 443 --script=ssl-enum-ciphers rbc[.]com
-
-CDE5-3998-F178-FBDE-0EFB
-
-
-msploit(msfconsole):
--5 modules?
--auxiliary (enumeration/scaning)
--xploit
--post-x
-
->msfconsole (exes msploit
->search portscan (looks for modules)
->use auxiliary/scanner/portscan/tcp (specific scanner for syn packets)
->options (more requirements)
->set ports 1-65535 (change ports)
->set rhosts 192.168.0.1
->run (or >exploit)
-
->use auxiliary (lists all)
->search tomcat (lists xploits)
->search apache
->search eternalblue 
-
-
-(rhost = 1 target)
-(rhosts= a range of targets)
-
-webapp assessment vs pentest
-e.g, vulnerabilites(xss,csrf) < exploit (sql inj, cred stuff, pwd spray)
-
-#-------------------e-n-d-------------------------------------------------------------
+#
+# ls /usr/share/nmap/scripts
+# ^all scripts available via nmap
+#
+# eternal blue
+# smd-vuln-ms17-010.nse
+# enumeration is the most !!
+#
+# check for ciphers first 
+#
+# nmap -p 443 --script=all #runs all scripts in the folder + time consume)
+# nmap -p 443 --script=ssl-enum-ciphers rbc[.]com
+#
+# CDE5-3998-F178-FBDE-0EFB
+#
+#
+# msploit(msfconsole):
+# -5 modules?
+# -auxiliary (enumeration/scaning)
+# -xploit
+# -post-x
+#
+#  >msfconsole (exes msploit
+#  >search portscan (looks for modules)
+#  >use auxiliary/scanner/portscan/tcp (specific scanner for syn packets)
+#  >options (more requirements)
+#  >set ports 1-65535 (change ports)
+#  >set rhosts 192.168.0.1
+#  >run (or >exploit)
+#
+#  >use auxiliary (lists all)
+#  >search tomcat (lists xploits)
+#  >search apache
+#  >search eternalblue 
+#
+#
+#  (rhost = 1 target)
+#  (rhosts= a range of targets)
+#
+# webapp assessment vs pentest
+# e.g, vulnerabilites(xss,csrf) < exploit (sql inj, cred stuff, pwd spray)
+#
 #--------------------------------------------N-I-K-T-O--------------------------------
-#webserver vulns (missing headers, xss etc)
+# webserver vulns (missing headers, xss etc)
 #
 # $ nikto -h https://example.com	
 #
@@ -108,19 +105,32 @@ e.g, vulnerabilites(xss,csrf) < exploit (sql inj, cred stuff, pwd spray)
 #
 #
 #----------------B-U-R-P-S-U-I-T-E------------
-#invest $400 to get the pro edition - webapp vulns
-#need nessus+burpsuite=~2900 (cobaltstrike=~7k)
+# invest $400 to get the pro edition - webapp vulns
+# need nessus+burpsuite=~2900 (cobaltstrike=~7k)
 #
 # first congifure browser settings to manual proxy > 127.0.0.1 port 8080 (accept all protocols)
 #	proxy tab > intercept on > fwd x 10
 #	target tab > r.clk main domain > add to scope   
 #	filter > show only in scope
 #	right click scope domain > scan (pro version)
+# scan details > crawl/audit+crawl>audit only
+#	default resource pool > 10 (default) or 1
 #
 #
 #
 #
-#----------------------------------------------
+#----------------K-I-O-P-T-R-I-X------------------------------
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#-------------------------------------------
 
 
 
