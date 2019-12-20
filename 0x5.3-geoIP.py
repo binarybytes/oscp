@@ -1,5 +1,9 @@
 #!/bin/python3
 
+
+#curl https://api.hackertarget.com/geoip/?q=1.1.1.1
+
+
 #pip install geoip2
 
 import geoip2.webservice
