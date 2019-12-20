@@ -20,3 +20,16 @@ response.city.name
 response.postal.code
 response.location.latitude
 response.location.longitude
+
+
+
+#OR
+
+
+import requests
+
+
+
+url = 'http://freegeoip.io/json/8.8.8.8'
+r = requests.post(url)
+print(r)
