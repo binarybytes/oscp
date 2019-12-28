@@ -1,0 +1,89 @@
+security awareness/double edged sword
+thisbook- describy sec vulns+atks teqs + countermeasures by apps
+knowing ur enemies helps u defend against them
+tasks around comprehensives atks:
+--mapping app functionality 
+---scrutinizing+atk core def mechanisms
+----probing specific cats of sec flaws
+#------------------------------------------------------------------
+# ch.1 webapp (in)security:
+# 
+# core prob: users can input arbitrary inputs
+# weak sec pocture
+# webapp defects = wide infra vuln
+# 
+#-----------------------------------------------------------------
+# ch.2 core def mechanisms
+#
+# all user input is untrusted(?)
+# webapps > manages usr access+ usr input+ response to atkrs
+# apps sec mechanisms reps the atk surface .:. understand funcs > atk
+# 
+#---------------------------------------------------------------------
+# ch.3 webapp tech
+#
+# http+tech on client/serv + schemes to encode data
+# 
+#
+#-------------------------------------------------------------------
+# ch.4 map the app
+#
+# recon+map atk surface+formulate POA (plan of atk)
+# --explore/probe app to catalog func+contents+entry points> usrinput
+#
+#--------------------------------------------------------------------
+# ch.5 bypass client-side cntrls
+#
+# 1st vuln- app relies on controls implemented on client side
+# any client side control is flawed cus all can b circumvntd
+# --a> transmits data via client assuming not gna b modd'
+# --b> rely on client-side chks on usr input
+# 
+#----------------------------------------------------------------------
+# ch.6-8 def mechanisms
+# 
+# cntl usr access > atk auth
+# -->login funcs + peripheral auth funcs (usr reg, pwd chng, acc recov)
+# stateless http + identify usr ax svrl diff requests
+# generate+transmission of session tokens
+#
+#---------------------------------------------------------------------
+# ch.9/10 vulns+usr input into code
+# 
+# sql injections+out of band channels, inference+time delays
+# --mysql/oracle/ms-sql
+# ---data stores; NoSQL, xPath, LDAP
+# xml, SOAP, back-edd http requests, email srvs
+# against app designers/devs
+#
+#--------------------------------------------------------------------
+# ch.11-13 
+#
+# xss
+# request forgery+UI redress 
+# cookie injection/sesion fixation, open redirection, local priv atk
+# --xplt activeX ctrl
+# non-vuln atks (mal site + suitably postitiond atkr)
+#
+#--------------------------------------------------------------------
+# ch.14-15
+# 
+# automate custom atks
+# all wbapps are diff> atks are tailored to specific bhavior of app
+# 
+#29/914
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
