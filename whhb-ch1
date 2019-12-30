@@ -1,0 +1,109 @@
+#------------------------------------------------------------------
+# ch.1 webapp (in)security:
+# 
+# core prob: users can sbmt arbitrary inputs
+# weak sec pocture
+# webapp defects = wide infra vuln
+# 
+#                 --begin--
+#
+# hstry- info repo only statc doc > www to display sed docs	
+# prsnt - dynmc/tailored to usrs
+# 'internal apps' moving to cut costs via cld
+# most client ware will use browsers
+#
+# ---------------pros--
+# (+) http connectionless/l.weight 
+# --gives resilience to servr errors 
+# ---avoids open net connections to ery usr (as with legacy srvr apps)
+# ----proxied+tunneled over other protocols(secure comms)
+# (+) UI changes made once to srvr	
+# --ery usr has a browser alrdy 
+# ---dnt need to dstrbute sprate client software (pre-webapps)
+# (+) client side scripting lets app push processing to clients
+# --browser ext. can expand capabilities in arbitrary ways
+# (+) simplicity + resourceful tools/OSS/
+#
+# old tech have = less prevalent vulns cus awareness increases
+# new tech = new xploits 
+# 
+# !!xpose sensi data + unrestricted acss on bkend srvrs of apps!!
+#
+# app lvl dos used for rsrce xhaustion FOR competitive edge
+# --financial trading, gambling, tkt resrvation
+#
+# sites boasts security via use of SSL and PCI scanning
+# --highests vulns from 07-11 (xss+csrf)
+# 
+# ssl ++ data in transit brwsr>srvr/integrity + identity of webapp srvr
+# --does NOT help atks against the srvr or clnt components of app
+# ---or broken auth, acl, sql, xss, csrf, infoleak,
+#
+#     --------------------------------------------------
+#     | !!core prob: users can sbmt arbitrary inputs!! |
+#     --------------------------------------------------
+#
+#------------------cons--
+# usrs can sbmt arbitraty input:
+# aka interfere with data transmitted btwn clnt/srvr
+# ---parameters,http headers, cookies
+# ----assmptns devs make abt usr inpt can b violated
+# -----apps not only accessible via browser + can gnrt vols of xplts
+#
+#
+#	
+#     --------------------------------------------------
+#     | !!atk: snd crafted input to app to cause errs!! |
+#     --------------------------------------------------
+#
+# why:
+# chg $ of product in html form field to fraud buy cheap stff
+# mod sesh token in http cookie to hijck other authd usr sesh
+# remove params to xploit logic flaw/prcsng
+# mal inpt/query tht bkends will prcs n infoleak sensi data
+#
+#
+# .:. ssl does not stop atkrs from sbmt crftd input .:.
+#     -means other usrs cnt c mal data in trnst
+#     --usr can send nethng in tht ssl tunnel
+#
+# key problms:
+# -underdevloped sec awareness
+# -cstm dev
+# -dcptve smplcty(app frmwrks tht use rdymade code; Liferay,Appfuse)
+# -evlving thrt profile (dev team race agnst rlse vs new evlvg threats)
+# -rsrc+time cnstrnts
+# ovr-extnd tech (js in ajax-based apps) -- stretched/adpted tech
+# incrse demnds on funcs(uplds +wiki style edits)
+# --usr >perm.fw (allow inbnd http/https)>web app>bkend
+#
+# -sec perimeter changed
+# --b4 was perm.fw+bastion hosts
+# ---now=all in securing the app itself
+# -----.:. one defective sloc in app can make an org vuln
+#
+#  
+#     ----------------------------------------------------
+#     | !!goal; relocate security perimeter to app lvl!! |
+#     ----------------------------------------------------
+#
+# !!csrf via browser extns!! 
+#
+# misleading bzzwrds:
+# web2.0(grtr use of funcs; async http requests+xdomain integration)
+# cloud (grtr use of xtrnl srvc prvdrs/virtualiztion/hstng env)
+# 
+# summary: 
+# ery aspect of usr input with apps can b malicious .:. iupg  
+# --q: how can this b implemented? the innocent until prov guilty way
+# 
+# 
+# 
+#     --------------------------------------------------------
+#     |.:.as old sec imprvs;new thrts evlv to replace them.:.|
+#     --------------------------------------------------------
+#
+#-----------------------------------------------------------------
+
+1.3hrs
+
