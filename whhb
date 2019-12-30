@@ -71,7 +71,17 @@ tasks around comprehensives atks:
 # automate custom atks
 # all wbapps are diff> atks are tailored to specific bhavior of app
 # 
-#29/914
+#--------------------------------------------------------------------
+# ch.16-21
+#
+# code in c, c++ (buffr oflows, int vulns, strg flaws)
+# app arch flaws
+# vulns in src.c0
+# toolkit oview(tk)
+#
+#
+#--------------------------------------------------------------------
+
 
 
 
