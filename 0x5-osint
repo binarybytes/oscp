@@ -144,7 +144,24 @@ udp (connection-less):dns,dhcp,snmp
 #
 #----------------K-I-O-P-T-R-I-X------------------------------
 #
-#
+download kioptrix1
+apt get install unrar
+unrar -e 
+
+<a>discovering the -range of this network (192.168.0.10) try to findhost
+<b> /etc/init.d/nessusd start 
+----sudo !!
+<c>https://hostname:8834
+
+list usrs:
+ /opt/nessus/sbin/nessuscli lsuser
+
+1.run nessus basic scan
+2.run nmap (nmap -A -T4 -Pn -p22,80,111,139,443,32768 10.88.xxx.x)
+*up arrow to get update*
+**rpcbind is open wen 139 samba smdb is open
+
+7:20:8
 #
 #
 #
