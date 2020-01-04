@@ -1,1 +1,63 @@
+#-------------------------------s-s-h---------------------------------------------
+Ssh-remote axe to pc>secure/encrypted protocol
+--tcp based+listens on port 22
+To start the srvc in kali:
+
+	$ Service ssh start
+	$ netstate -antp|grep sshd
+
+Ssh start@boot > update-rc.d > enable/disable most srvcs in kali
+
+	$ update-rc.d ssh enable 
+#-------------------------h-t-t-p---------------------------------------------------
+Http pro> host a site+platform to d.load malware on victm machine
+--tcp based+listens on port 80
+To start the http srvc in kali:
+
+	$ service apache2 start
+	$ netstat -antp|grep apache2
+	$ update-rc.d apache2 enable
+
+More granular control: rcconf OR sysvrc-conf (mng boot persistence of srvcs)
+#-------------------------b-a-s-h-+-g-r-e-p-------------------------------------------------
+Task1: get subdomains+ip of cisco(.)com
+1)get index pg with wget
+2)scan for domains
+3)xtract lines tht contain links “href=”
+4)xtract doms w/o a slash in field 3 append | cut “/” -f 3 
+5)xtract doms w/o a period append | grep “\.”
+6)clean it up to get rid of quote append | cut ‘“‘ -f 1
+7)delete duplicates dedup append | sort -u
+8)exlude anything leftover append | grep -v “path><path =d”
+
+	$ wget cisco(.)com
+	$ ls -l index.html
+	$ grep “href=” index.html
+	$ grep “href=” index.html | cut -d “/” -f 3
+	$ grep “href=” index.html | cut -d “/” -f 3 | grep “\.”
+	$ grep “href=” index.html | cut -d “/” -f 3 | grep “\.” | cut -d ‘“‘ -f 1
+	$ grep “href=” index.html | cut -d “/” -f 3 | grep “\.” | cut -d ‘“‘ -f 1 | sort -u
+	$ grep “href=” index.html | cut -d “/” -f 3 | grep “\.” | cut -d ‘“‘ -f 1 | grep -v “path” | sort -u
+
+
+Clever way:cat file+grep with regex
+
+	$ cat index.html | grep -o ‘https://[^”]*’ | cut -d “/” -f 3 | sort -u > domains.txt
+
+Sources: Grep
+
+
+host cmd to get ip of urls in domain.txt .:. bash loop
+
+	$ for url in $(cat domains.txt); do host $url; done
+
+1)host is busy;ip output into grep 
+
+$ for url in $(cat domaints.txt); do host $url; done | grep “has address” | cut -d “ “ -f 4 | sort -u  
+
+---=Task1Complete=---
+$ Wget hxxps://www.cisco.com
+$ Cat index.html | grep -o ‘https://[^”]*’ | cut -d “/” -f 3 | sort -u > domains.txt
+$ for url in $(cat domains.txt); do host $url; done | grep “has address” | cut -d “ ” -f 4 | sort -u
+------------------- 
 
