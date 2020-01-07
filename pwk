@@ -71,3 +71,4 @@ Task2: inspect server log for attack via bash (apache http server)
 	$ cat access.log | cut -d “ “ -f 1 | sort -u
 	$ cat access.log | cut -d “ “ -f 1 | sort | uniq -c | sort -urn
 
+Page!33 of!361
