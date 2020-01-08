@@ -78,4 +78,4 @@ Task2: inspect server log for attack via bash (apache http server)
 xrcise: create bash script for a ping sweeep (find ip's)
 ---------note> can b detected by protocol loggers like ippl
 
-
+resource: hxxps://niiconsulting.com/checkmate/2017/06/a-detail-guide-on-oscp-preparation-from-newbie-to-oscp/
