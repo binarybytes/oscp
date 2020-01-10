@@ -124,7 +124,15 @@ Bind shell from win>kali, vcvr
 
 
 
-g0tmi1k for the Alpha machine in PWK forums
+#----------------Ghdb:---------------------------------------------------------#
+Site:microsoft.com -site:microsoft.com
+Intitle:”netbotz appliance” “OK” -filetype:pdf
+Intitle:”SpeedStream Router Management Interface”
+inurl:”level/15/exec/-/show”
+“# -FrontPage-” filetype:pwd inurl:(service | authors | administrators | users)”
+#------------------------------------------------------------------------------#
+
+
 
 
 
