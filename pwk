@@ -133,6 +133,34 @@ inurl:”level/15/exec/-/show”
 #------------------------------------------------------------------------------#
 
 
+#--------------------W-i-r-e-s-h-a-r-k-----------------------------------------#
+Wshark uses libpcap (*nix), winpcap (win)
+Capture+display filters;only c wat u need
+network>cap.filter>cap.engine>disp.filter
+
+Packet1: ARP br.cast looking for default gway
+Packet2: ARP reply with MAC addr
+Packet2: DNS A(ipv4) query for yahoo.ca
+Packet4: DNS AAAA(ipv6) query “”.ca
+Packet5: DNS A - response recieved
+Packet6: DNS AAAA - “”
+Packet7-9: three way handshake 
+Packet10: http - get request sent
+------------------------------------------
+Osint:
+Engagement begins>what do they do?
+public facing?
+Sales dept?
+Hiring? (contact info, fax, email, company structure, etc)
+Clean html
+
+#--------------h-a-r-v-e-s-t-e-r---------------------------------------------#
+Email harvest:
+theHarvester; gather uname,subdmains , hosts, employee names, open ports, banners,	
+From: search engines, PGP servers, shodan pcdb
+
+
+
 
 
 
