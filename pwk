@@ -160,6 +160,28 @@ theHarvester; gather uname,subdmains , hosts, employee names, open ports, banner
 From: search engines, PGP servers, shodan pcdb
 
 
+	$ sudo -sH #root+mod any file
+	$ sudo apt-get subversion #d.l version control
+	$ cd opt #change dir
+	$ svn checkout hxxps://github.com/laramies/theHarvester
+	$ ls #can see theHarvester in /opt
+	$ python3 -m pip install pipenv
+	$ pipenv install
+	$ pipenv run python3 theHarvester.py -d cisco.com -b google.com >google.txt #try dif
+										#data src(-b)
+
+Note: update apikeys in api-keys.yaml
+bing
+github
+hunter
+intelx
+securityTrails
+shodan
+Spyse
+
+Search ngine comparison: search engine showdown
+netcraft> find out web server info (os, uptime, -V)
+spyse	
 
 
 
