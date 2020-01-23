@@ -201,7 +201,11 @@ spyse
 	# run
 
 
+++
 
+
+$ host -t ns abc.com #find dns server
+$ host -t mx abc.com #find mail server
 
 
 
