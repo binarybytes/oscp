@@ -192,7 +192,22 @@ spyse
 	$ tcpdump -nX -r xxx.pcap #view in hex
 	$ tcpdump -nX -r xxx.pcap | grep .com | uniq -c | sort -urn # "" + filters
 	$ tcpdump -A -n 'tcp[13] = 24' -r xxx.pcap #convert to ASCII + 14th byte should havh PSH flag \\\powerful///
-	
+#---------------r-e-c-o-n--n-g------------------------#
+	$ recon-ng
+	$ show modules
+	$ use recon/domains-vulnerabilities/xssed #find xss on domains
+	$ show options #see wats set
+	$ set SOURCE abc.com #set the domain u wana chk
+	# run
+
+
+
+
+
+
+
+
+
 fkn awesome resources:
 hxxps://niiconsulting.com/checkmate/2017/06/a-detail-guide-on-oscp-preparation-from-newbie-to-oscp/
 hxxps://highon.coffee/blog/reverse-shell-cheat-sheet/
