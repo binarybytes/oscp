@@ -183,8 +183,13 @@ Search ngine comparison: search engine showdown
 netcraft> find out web server info (os, uptime, -V)
 spyse	
 
-
-
+#--------------------------t-c-p-d-u-m-p------------------------------------------------------------------------#
+	$ tcpdump -r xxx.pcap #read the files
+	$ tcpdump -n -r xxx.pcap | awk -F" " '{print $3}' | sort -u | head #read/no numb convert, find space and add line3
+	$ tcpdump -n src host 1.1.1.1 -r xxx.pcap #filter by src
+	$ tcpdump -n dst host 2.2.2.2 -r xxx.pcap #filter by dest
+	$ tcpdump -n port 81 -r xxx.pcap #filter by port
+	
 
 fkn awesome resources:
 hxxps://niiconsulting.com/checkmate/2017/06/a-detail-guide-on-oscp-preparation-from-newbie-to-oscp/
