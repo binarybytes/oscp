@@ -207,7 +207,10 @@ spyse
 $ host -t ns abc.com #find dns server
 $ host -t mx abc.com #find mail server
 
-
+$ echo www > list.txt
+$ echo ftp >> list.txt
+$ echo "" >> list.txt
+$ for ip in $(cat list.txt); do host $ip.abc.com;done
 
 
 
