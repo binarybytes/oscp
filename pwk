@@ -210,9 +210,29 @@ $ host -t mx abc.com #find mail server
 $ echo www > list.txt
 $ echo ftp >> list.txt
 $ echo "" >> list.txt
-$ for ip in $(cat list.txt); do host $ip.abc.com;done
+$ for ip in $(cat list.txt); do host $ip.abc.com;done #--->(www|ftp|mail).example.com 
+$ for ip in $(seq 155 190); do host 1.1.1.$ip;done |grep -v "not found" #---->probe the ip range via loop 
+$ host -l example.com dns.example.com #zone transfer
+$ host -t ns example.com | cut -d " " -f 4 #clean output of dns info
 
-
+#---------------------bash the above----------------------------------#
+#/bin/bash							      #					      
+#bash script for dns search + dns zone transfer			      #
+if [ -z "$1" ]; then						      #
+echo "-----------------------"					      #
+echo "we be bashin out heeeyuh"					      #
+echo "use like: $0 <domain name>"				      #
+echo "--------------------------"				      #
+else								      #
+echo "we might need to bash...heads.." 				      #
+exit 0								      #
+fi								      #
+								      #
+#find dns server of target					      #
+for server in $(host -t ns $1 | cut -d" " -f4);do		      #
+#try zone transfer 						      #
+host -l $1 $server | grep "has address"				      #
+#---------------------------------------------------------------------#
 
 
 fkn awesome resources:
