@@ -239,8 +239,10 @@ dnsenum
 
 port scannz
 
-z
-
+TCP- connect: relies on 3way handshake + once u send final ACK then the port says open
+SYN/stealth scan: target machine sends SYN-ACK, w/o us sending final ACK
+UDP scan: empty packets sent to spcific port + if its open = no reply + if its close = icmp unreachable msg
+-->unreliable+people forget to scan for this+most port scanners only use interesting ports
 
 fkn awesome resources:
 hxxps://niiconsulting.com/checkmate/2017/06/a-detail-guide-on-oscp-preparation-from-newbie-to-oscp/
