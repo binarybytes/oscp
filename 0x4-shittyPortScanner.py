@@ -1,7 +1,10 @@
 #!/bin/python3
 
+#----------#
+#  unikz   #
+#----------#
 
-#v1 shitty portscanner by unix -- no threading
+#v1 shitty portscanner by unikzzz -- no threading
 
 import sys #cmd arguments++
 import socket  #connect to afinet and do soc streaming, port++
